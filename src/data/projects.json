@@ -1,30 +1,58 @@
 [
   {
+    "id": "html-lab-card",
+    "title": "HTML Prompt: Sign-Up Form",
+    "path": "/projects/html-lab-card",
+    "shortDescription": "Prompt, raw HTML, and rendered card output.",
+    "component": "HtmlPrompt",
+    "category": "HTML"
+  },
+  {
+    "id": "html-pricing",
+    "title": "HTML Prompt: Pricing Table",
+    "path": "/projects/html-pricing",
+    "shortDescription": "Prompt, HTML, and output for a pricing table.",
+    "component": "HtmlPricing",
+    "category": "HTML"
+  },
+  {
     "id": "counter",
     "title": "Counter",
     "path": "/projects/counter",
     "shortDescription": "Simple stateful counter with increment, decrement & reset.",
-    "component": "Counter"
+    "component": "Counter",
+    "category": "JavaScript"
   },
   {
     "id": "todo",
     "title": "Todo List",
     "path": "/projects/todo",
     "shortDescription": "Tiny todo app using basic React state.",
-    "component": "Todo"
+    "component": "Todo",
+    "category": "JavaScript"
   },
   {
     "id": "stopwatch",
     "title": "Stopwatch",
     "path": "/projects/stopwatch",
     "shortDescription": "Start/stop/reset stopwatch with ms precision.",
-    "component": "Stopwatch"
+    "component": "Stopwatch",
+    "category": "JavaScript"
   },
   {
     "id": "colors",
     "title": "Color Playground",
     "path": "/projects/colors",
     "shortDescription": "Experiment with HSL color sliders and previews.",
-    "component": "ColorPlayground"
+    "component": "ColorPlayground",
+    "category": "JavaScript"
+  },
+  {
+    "id": "markdown",
+    "title": "Markdown Previewer",
+    "path": "/projects/markdown",
+    "shortDescription": "Live Markdown editor with preview pane.",
+    "component": "MarkdownPreviewer",
+    "category": "JavaScript"
   }
 ]

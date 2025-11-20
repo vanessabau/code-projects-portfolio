@@ -1,0 +1,80 @@
+// src/pages/projects/HtmlPricing.jsx
+import HtmlLabLayout from "../../components/HtmlLabLayout";
+
+const HTML_SNIPPET = `
+<table>
+  <caption>Item Cart</caption>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Banana</th>
+      <td>$1.00</td>
+      <td>3</td>
+    </tr>
+     <tr>
+      <th>Burger</th>
+      <td>$6.90</td>
+      <td>1</td>
+    </tr>
+     <tr>
+      <th>Cookie</th>
+      <td>$4.20</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>$12.10</td>
+      <td>8</td>
+    </tr>
+  </tfoot>
+  
+</table>
+`;
+const LOCAL_CSS = `
+table, caption {
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+    
+}
+`;
+export default function HtmlPricing() {
+    return (
+        <HtmlLabLayout
+            title="HTML Table: Item Cart"
+            description="A semantic pricing section built with plain HTML."
+            promptIntro={`
+Implement a cart in HTML with the following static data:
++------------+------------+---------------+
+| Item       | Price      | Quantity      |
+|------------|------------|---------------|
+| Banana     | $1.00      | 3             |
+|------------|------------|---------------|
+| Burger     | $6.90      | 1             |
+|------------|------------|---------------|
+| Cookie     | $4.20      | 4             |
+|------------|------------|---------------|
+| Total      | $12.10     | 8             |
++------------+------------+---------------|
+
+your HTML code:
+`}
+            promptBullets={[
+                "A section heading",
+                "A table of plans and prices",
+                "A short description column",
+            ]}
+            promptOutro="Use semantic tags like <section>, <table>, <thead>, and <tbody>."
+            htmlSnippet={HTML_SNIPPET}
+            css={LOCAL_CSS}
+        />
+    );
+}

@@ -1,5 +1,8 @@
+// src/components/Sidebar.jsx
 import { NavLink } from "react-router-dom";
 import projectsData from "../data/projects.json";
+
+const CATEGORIES = ["HTML", "CSS", "JavaScript"];
 
 export default function Sidebar({ isOpen, onClose }) {
     return (
@@ -11,8 +14,8 @@ export default function Sidebar({ isOpen, onClose }) {
                 </div>
 
                 <nav className="sidebar__nav">
+                    {/* OVERVIEW */}
                     <div className="sidebar__section-label">Overview</div>
-
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
@@ -23,20 +26,40 @@ export default function Sidebar({ isOpen, onClose }) {
                         Home
                     </NavLink>
 
-                    <div className="sidebar__section-label">Projects</div>
+                    {/* CODE PROJECTS */}
+                    <div className="sidebar__section-label" style={{ marginTop: 16 }}>
+                        Code Projects
+                    </div>
 
-                    {projectsData.map((project) => (
-                        <NavLink
-                            key={project.id}
-                            to={project.path}
-                            className={({ isActive }) =>
-                                "sidebar__link" + (isActive ? " sidebar__link--active" : "")
-                            }
-                            onClick={onClose}
-                        >
-                            {project.title}
-                        </NavLink>
-                    ))}
+                    {CATEGORIES.map((category) => {
+                        const categoryProjects = projectsData.filter(
+                            (project) => project.category === category
+                        );
+
+                        return (
+                            <div key={category}>
+                                {/* Category label (HTML / CSS / JavaScript) */}
+                                <div className="sidebar__section-label">
+                                    {category}
+                                </div>
+
+                                {/* Projects in that category */}
+                                {categoryProjects.map((project) => (
+                                    <NavLink
+                                        key={project.id}
+                                        to={project.path}
+                                        className={({ isActive }) =>
+                                            "sidebar__link" +
+                                            (isActive ? " sidebar__link--active" : "")
+                                        }
+                                        onClick={onClose}
+                                    >
+                                        {project.title}
+                                    </NavLink>
+                                ))}
+                            </div>
+                        );
+                    })}
                 </nav>
             </div>
         </aside>

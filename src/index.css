@@ -454,6 +454,117 @@ button:active {
     margin-top: 4px;
 }
 
+/* HTML Lab */
+
+.html-lab__layout {
+    display: grid;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.html-lab__panel {
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-surface);
+}
+
+.html-lab__panel-title {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-muted);
+}
+
+.html-lab__prompt-text {
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.html-lab__prompt-list {
+    margin: 0 0 6px 16px;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.html-lab__code {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: #0a1a2f0d; /* very subtle navy wash */
+    overflow-x: auto;
+    font-size: 0.85rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.html-lab__preview {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+}
+
+/* Simple styling for the example product card inside the preview */
+.product-card {
+    max-width: 340px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.product-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-card__body {
+    padding: 12px 14px 14px;
+}
+
+.product-card__title {
+    margin: 0 0 4px;
+    font-size: 1rem;
+}
+
+.product-card__description {
+    margin: 0 0 10px;
+    font-size: 0.88rem;
+    color: var(--color-muted);
+}
+
+.product-card__button {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: white;
+    transition: background-color 0.15s ease, transform 0.08s ease;
+}
+
+.product-card__button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.product-card__button:active {
+    transform: scale(0.97);
+}
+
+@media (min-width: 900px) {
+    .html-lab__layout {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
+
+
 /* Responsive tweaks */
 
 @media (min-width: 768px) {

@@ -1,0 +1,118 @@
+/* ---------- HTML LAB LAYOUT ---------- */
+
+.html-lab__grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+/* Prompt card takes full width of the grid */
+.html-lab__panel--prompt {
+    grid-column: 1 / -1;
+}
+
+/* At desktop widths, make two columns for the bottom row */
+@media (min-width: 860px) {
+    .html-lab__grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
+
+/* Shared panel/card styles */
+.html-lab__panel {
+    padding: 16px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-surface);
+}
+
+.html-lab__panel-title {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-muted);
+}
+
+.html-lab__prompt-text {
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.html-lab__prompt-list {
+    margin: 0 0 6px 16px;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+/* Code block styling */
+.html-lab__code {
+    margin: 0;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgba(10, 26, 47, 0.06); /* subtle navy wash */
+    overflow-x: auto;
+    font-size: 0.85rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* Output preview */
+.html-lab__preview {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+}
+
+/* Example product card styling inside the preview (unchanged) */
+.product-card {
+    max-width: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.product-card__image {
+    width: 100%;
+    display: block;
+}
+
+.product-card__body {
+    padding: 12px;
+}
+
+.product-card__title {
+    margin: 0 0 4px;
+    font-size: 1rem;
+}
+
+.product-card__description {
+    margin: 0 0 10px;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+}
+
+.product-card__button {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: white;
+    transition: background-color 0.15s ease, transform 0.08s ease;
+}
+
+.product-card__button:hover {
+    background-color: var(--color-accent-hover);
+}
+.html-lab__prompt-text {
+    white-space: pre-wrap; /* preserve newlines AND multiple spaces */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
