@@ -1,0 +1,30 @@
+[
+  {
+    "id": "counter",
+    "title": "Counter",
+    "path": "/projects/counter",
+    "shortDescription": "Simple stateful counter with increment, decrement & reset.",
+    "component": "Counter"
+  },
+  {
+    "id": "todo",
+    "title": "Todo List",
+    "path": "/projects/todo",
+    "shortDescription": "Tiny todo app using basic React state.",
+    "component": "Todo"
+  },
+  {
+    "id": "stopwatch",
+    "title": "Stopwatch",
+    "path": "/projects/stopwatch",
+    "shortDescription": "Start/stop/reset stopwatch with ms precision.",
+    "component": "Stopwatch"
+  },
+  {
+    "id": "colors",
+    "title": "Color Playground",
+    "path": "/projects/colors",
+    "shortDescription": "Experiment with HSL color sliders and previews.",
+    "component": "ColorPlayground"
+  }
+]
